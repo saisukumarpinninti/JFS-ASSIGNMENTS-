@@ -1,0 +1,20 @@
+
+public class StringBufferClassAssignments {
+
+	public static void main(String[] args) {
+		StringBuffer q1a = new StringBuffer("StringBuffer");
+		System.out.println("Before appending  :"+q1a+"\n");
+		// appending the first string 
+		q1a.append("is a peer class of String");
+		System.out.println("after appending 1 :"+q1a+"\n");
+		
+		// appending the first string 
+		q1a.append("that provides much of");
+		System.out.println("after appending 2 :"+q1a+"\n");
+		
+		// appending the first string 
+		q1a.append("the functionality of strings”");
+		System.out.println("after appending 3 :"+q1a+"\n");
+	}
+
+}

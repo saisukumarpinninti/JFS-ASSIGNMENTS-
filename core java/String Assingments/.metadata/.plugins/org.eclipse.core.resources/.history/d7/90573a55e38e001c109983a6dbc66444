@@ -1,0 +1,15 @@
+//1.Write an application to determine the length of the String str = “Hello World”. 
+public class StringClassAssingments {
+
+	public static void main(String[] args) {
+		String str = "Hello World";
+		System.out.println("the length of the string Hello World is :  "+ str.length());       // prints the length of the string str 
+		
+// 2) Write an application to join the two Strings “Hello, ” & “How are you?” 
+		String str2 = "Hello";
+		String str3 = "How are you";
+		String str4 = str2.concat(str3 );
+		System.out.println("the string after joining both strings is :  "+str4);
+	}
+
+}
