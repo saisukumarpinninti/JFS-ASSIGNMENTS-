@@ -1,7 +1,15 @@
-# JFS-ASSIGNMENTS-
-This repo contains my work  for the JFS-Angular Feb2022.<br>
-<b> * Each topic is divided into Folder </b><br>
-<b> * Assignments to that paticular topic are in the spefic folder </b></br>
-<b><u> Note:</u> </b>: the java assingments projects  uploaded are developed in IntelliJ IDEA.</br>
-<b><u> 1:</u> </b>: the java strings assingments projects  uploaded are developed in eclipse .
+# Hello!
 
+Hi!
+ This repo contains  files for  **JFS-Angular Feb2022.**
+
+#  Files and Folders
+ - All the Topics contain their Respective Folder . 
+ -  In Which they have  SubFolder for each  Assignment'sGiven .
+ -  The subfolder contains the  files for the respective Assignment.
+
+> **Note:**
+> - The **Java Assignments ** are intellij Projects .
+> - Each Assignment is a Seperate Project  .
+---
+# Thanks for Visiting 😊.
