@@ -37,11 +37,10 @@ class developer{
 public class Q2 {
     public static void main(String[] args) {
         developer sai = new developer(20,"21-02-2022","2.30",20);
-        sai.dev();
+        System.out.println(sai.dev());
         Class a = sai.getClass();
         java.lang.annotation.Annotation p = a.getAnnotation(info.class);
         info i = (info)p;
         System.out.println(i);
-
     }
 }

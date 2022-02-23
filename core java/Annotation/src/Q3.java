@@ -31,7 +31,7 @@ public class Q3 {
         Method c= n.getClass().getMethod("myMethod3");
         Execute a1E= a.getAnnotation(Execute.class);
         Execute b1E = b.getAnnotation(Execute.class);
-        Execute c1E = c .getAnnotation(Execute.class);
+        Execute c1E = c.getAnnotation(Execute.class);
         System.out.println(a);
         System.out.println(b);
         System.out.println(c);
