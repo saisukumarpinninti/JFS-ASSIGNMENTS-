@@ -1,6 +1,12 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+//. Write an application using lambda expressions to print Orders having 2 criteria implemented:
+// 1) order price more than 10000
+// 2) order status is ACCEPTED or COMPLETED.
 
+//Description:
+//
+//Write a program in such a way that it has a method which returns the list of orders satisfying the 2 conditions mentioned in the question.
 class orders {
     private int totalPrice;
     private String status;
