@@ -12,7 +12,7 @@
 > - Each Assignment is a Seperate Project.
 > - The Projects are in the respective SubFolder.
 
-<img src="https://pbs.twimg.com/media/EkcskakWAAEJAk_.jpg">
+<img src="https://pbs.twimg.com/media/EkcskakWAAEJAk_.jpg" style: width= 400px,heoght-400px;>
 
 # Thanks for Visiting 😊.
 ### End
