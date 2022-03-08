@@ -11,7 +11,7 @@
 > - The Java Assignments are intellij Projects .
 > - Each Assignment is a Seperate Project.
 > - The Projects are in the respective SubFolder.
-> > - The Spring Assignments are Eclipse Projects .
+> - The Spring Assignments are Eclipse Projects .
 
 <img src="https://pbs.twimg.com/media/EkcskakWAAEJAk_.jpg" style: width= 400px,heoght-400px;>
 
