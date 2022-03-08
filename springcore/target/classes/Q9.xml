@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="q2List" class="Q9.Q9"  init-method="init" destroy-method="destroy"> 
+    <constructor-arg   type="int"  value="1"/>
+    <constructor-arg  value="What is Orange?"/>
+    <constructor-arg index="2">  
+    <list>  
+    <value>it  is a Color</value>  
+    <value>it  is a Fruit</value>  
+    </list>  
+    </constructor-arg>  
+</bean>  
+
+    <bean id="q2Set" class="Q9.Q9" >  
+    <constructor-arg   type="int"  value="2"/>
+    <constructor-arg  value="What is Java?"/>
+    <constructor-arg index="2">  
+    <set>  
+    <value>Java is a programming language</value>  
+    <value>Java is a platform</value>  
+    <value>Java is an Island</value>  
+    </set>  
+    </constructor-arg>  
+</bean>  
+</beans>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
+<bean id="i" class="Q5.point">
+<property name="x" value="1"/>
+<property name="y" value="2"/>
+</bean> 
+<bean id="ij" class="Q5.injectimpl">
+<property name="s" value="10"/>
+
+</bean> 
+<bean id="po" class="Q5.point">
+<property name="x" value="10"/>
+<property name="y" value="1"/>
+</bean>
+
+<bean id="circle" class="Q5.circle">
+
+</bean>  
+
+<bean id="Dot" class="Q5.dot">
+<property name="center" ref="po"/>
+</bean>
+
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+</beans>
