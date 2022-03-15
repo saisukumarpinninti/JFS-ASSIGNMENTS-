@@ -17,8 +17,7 @@
 >> - **legend for the Assignments:**
 >>  -  Q1-Q4:  The Assignments are in the project Q1-Q4.
 >>  -  Q5,Q9,Q10,Q11 : The Assignments are in  project Q5_Q9_Q10_Q11.
->>  -  Q6,Q7,: The Assignments are in the project Q6_Q7.
->>  -  Q8: The Assignment is in the project Q8.
+>>  -  Q6,Q7,Q8: The Assignments are in their respective project names Q6,Q7,Q8.
 
 
 ### Here's a Funny Meme:  
