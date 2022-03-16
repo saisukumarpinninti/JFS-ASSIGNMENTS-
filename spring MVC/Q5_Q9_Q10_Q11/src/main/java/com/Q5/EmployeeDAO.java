@@ -4,13 +4,16 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class EmployeeDAO {
 	private Connection con;
-	
+
 	public  EmployeeDAO() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -58,7 +61,8 @@ public class EmployeeDAO {
 		ResultSet resultSet=preparedStatement.executeQuery();
 		return resultSet;
 	}
-	
+
+  
 	public void updateDetails(Employee employee) throws Exception {
 		String sql = "UPDATE employee SET employeeName=?,employeeDepartment=?,employeeDesignation=?,employeeSalary=? where employeeId=?";
 		PreparedStatement preparedStatement = con.prepareStatement(sql);
@@ -70,4 +74,26 @@ public class EmployeeDAO {
 		
 		preparedStatement.executeUpdate();
 	}
+	
+
+
+	public List<Employee> getEmployeeByPageNO(int pageNo,int total) throws SQLException{
+	    String sql = "select * from employee limit "+(pageNo-1)+","+total;
+	    PreparedStatement preparedStatement = con.prepareStatement(sql);
+	    ResultSet resultSet=preparedStatement.executeQuery();
+	    List<Employee>nameList = new ArrayList<>();
+	  
+	    while(resultSet.next()) {
+	    	 Employee emp = new Employee();
+	    	 emp.setEmployeeId(resultSet.getInt(1));
+		     emp.setEmployeeName(resultSet.getString(2));
+		     emp.setEmployeeSalary(resultSet.getInt(5));
+	        nameList.add(emp);
+	    }
+	   
+	         return  nameList;
+	        }
+		
+	    
+	
 }

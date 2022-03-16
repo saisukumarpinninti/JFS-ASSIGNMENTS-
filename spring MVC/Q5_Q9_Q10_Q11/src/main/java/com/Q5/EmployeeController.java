@@ -1,5 +1,8 @@
 package com.Q5;
 
+import java.sql.SQLException;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -64,5 +67,18 @@ public class EmployeeController {
 		return modelAndView;
 	}
 	
+    @RequestMapping(value = "/viewemp/{pageNo}")
+    public ModelAndView employeeView(@PathVariable int pageNo) throws SQLException{
+        ModelAndView modelAndView = new ModelAndView("EmployeePage");
+        int total=5;
+        if(pageNo==1){}
+        else{
+            pageNo=(pageNo-1)*total+1;
+        }
+        List<Employee> list=employeeDao.getEmployeeByPageNO(pageNo,total) ;
+        modelAndView.addObject("msg",list);
+        return  modelAndView;
+    }
+ 
 
 }
