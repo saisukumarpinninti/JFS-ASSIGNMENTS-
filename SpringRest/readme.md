@@ -13,7 +13,7 @@
 >  ## **legend for the Assignments:**
 >  -  Q1-Q6:  The Assignments are in the project SpringRest.
 >  -  Q9   : The Assignments are in  project SpringRest-Q9.
->  -  Q6,Q7,Q8: The Assignments are in their respective project names SpringRest-Q6/Q7/Q8.
+>  -  Q7,Q8: The Assignments are in their respective project names SpringRest-Q.
 
 
 ### Here's a UseFull Tip:  
