@@ -1,13 +1,14 @@
-package s;
+package Q7;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringRestQ9Application {
+//@EnableAutoConfiguration(exclude={MongoAutoConfiguration.class})
+public class Restq7Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringRestQ9Application.class, args);
+		SpringApplication.run(Restq7Application.class, args);
 	}
 
 }
