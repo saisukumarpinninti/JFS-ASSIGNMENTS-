@@ -11,9 +11,9 @@
 > - Multiple Assignments are in a single project. 
 
 >  ## **legend for the Assignments:**
->  -  Q1-Q6:  The Assignments are in the project SpringRest.
->  -  Q9   : The Assignments are in  project SpringRest-Q9.
->  -  Q7,Q8: The Assignments are in their respective project names SpringRest-Q.
+>  -  Q1-Q6 :  The Assignments are in the project SpringRest.
+>  -  Q9    : The Assignments are in  project SpringRest-Q9.
+>  -  Q7    : The Assignment is in SpringRestQ-7.
 
 
 ### Here's a UseFull Tip:  
