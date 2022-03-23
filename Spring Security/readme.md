@@ -9,11 +9,8 @@
 **Details:**
 > - The  Assignments are SpringBoot Maven Projects .
 > - The  Assignments are using  Spring Security, 
-> - Asssignment 01 Assignments are in **https://github.com/saisukumarpinninti/JFS-ASSIGNMENTS-/tree/main/Spring%20Security/A1**
+> - Asssignment 01 Assignments are in [A1] (A1/SpringSecurity/)
 
-
-
- 
 
 ### Whats Spring Security ? 
 
