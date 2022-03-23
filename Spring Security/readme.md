@@ -11,6 +11,9 @@
 > - The  Assignments are using  Spring Security, 
 > - Asssignment 01 Assignments are in [A1] (A1/SpringSecurity/)
 
+##  A1/SpringSecurity-3 Config/
+>- The Project Contains Embedded H2 Database.
+>- can Also be Configured with  MySQL.  (uncomment the line 2 to 4 in application.properties)
 
 ### Whats Spring Security ? 
 
