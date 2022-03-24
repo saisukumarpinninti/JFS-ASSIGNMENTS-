@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 
 @SuppressWarnings("deprecation")
@@ -18,15 +19,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	DataSource ds ; 
+	
 	@Override
     protected void configure(HttpSecurity http) throws Exception {    
-            
-        http 
-        .authorizeRequests()
-        .antMatchers("/admin").hasRole("ADMIN")
-        .antMatchers("/user").hasAnyRole("ADMIN","USER")
-        .antMatchers("/").permitAll()
-        .and().formLogin();
+          http
+          .authorizeRequests()
+          .antMatchers("/").permitAll()
+          .antMatchers("/admin").hasRole("ADMIN")
+          .antMatchers("/user").hasAnyRole("ADMIN","USER")
+          .and()  
+          .formLogin()  
+          .loginPage("/login")
+          .permitAll()
+          .and()
+          .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+          .logoutSuccessUrl("/login").deleteCookies("JSESSIONID")
+          .invalidateHttpSession(true).permitAll() .and()
+          .rememberMe().tokenValiditySeconds(2592000).key("mySecret!").rememberMeParameter("checkRememberMe"); 
 	}  
 	
 	  protected void configure( AuthenticationManagerBuilder auth) throws Exception
