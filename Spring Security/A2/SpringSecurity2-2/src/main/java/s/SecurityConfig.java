@@ -19,15 +19,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.withUser("test") .password("$2a$12$Aa7jXBciYIlCKpMFBJNlUuzcSnFD6n6U50zP2CfSaeLA9lyG57qJi") //Sai
 		.roles("USER")
 		.and() 
-		.withUser("ADMIN")
+		.withUser("Am")
 		.password("$2a$12$Aa7jXBciYIlCKpMFBJNlUuzcSnFD6n6U50zP2CfSaeLA9lyG57qJi")  //Sai
-		.roles("Admin");
+		.roles("admin");
 
 	}
 	 @Override
 	    protected void configure(HttpSecurity http) throws Exception {
-	        http.authorizeRequests().antMatchers("/admin").hasRole("ADMIN")
-	                .antMatchers("/user").hasAnyRole("USER","ADMIN")
+	        http.authorizeRequests().antMatchers("/admin").hasRole("admin")
+	                .antMatchers("/user").hasAnyRole("USER","admin")
 	                .antMatchers("/").permitAll()
 	                .and().formLogin().successHandler(customSuccessHandler).permitAll();
 	    }

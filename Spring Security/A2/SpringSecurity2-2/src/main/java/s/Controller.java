@@ -6,23 +6,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
 	
-	@GetMapping("/hello")
-	public String Hello() {
-		String s = "<h1>HelloWorld</h1>" ;
-		return (s);
-		
-	}
+	@GetMapping("/AD")
+	public String H() {return "<h1>Access-Denied</h1>";}
+	
 	@GetMapping("/user")
-	public String Hello1() {
-		String s = "<h1>HelloUser</h1>" ;
-		return (s);
-		
-	}
+	public String Hel() {return "<h1>Hi,User</h1>" ;}
+	
 	@GetMapping("/admin")
-	public String Hello2() {
-		String s = "<h1>HelloAdmin</h1>" ;
-		return (s);
-		
-	}
+	public String He() {return "<h1>HelloAdmin</h1>" ;}
 
 }

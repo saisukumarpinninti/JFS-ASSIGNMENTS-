@@ -45,14 +45,13 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
 			roles.add(a.getAuthority());
 		}
 
-		 if (isAdmin(roles)) {
+		 if (isadmin(roles)) {
 			url = "/admin";
 		} else if (isUser(roles)) {
 			url = "/user";
 		} else {
-			url = "/accessDenied";
+			url = "/AD";
 		}
-
 		return url;
 	}
 
@@ -63,8 +62,8 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
 		return false;
 	}
 
-	private boolean isAdmin(List<String> roles) {
-		if (roles.contains("ROLE_ADMIN")) {
+	private boolean isadmin(List<String> roles) {
+		if (roles.contains("ROLE_admin")) {
 			return true;
 		}
 		return false;
