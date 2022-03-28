@@ -8,7 +8,7 @@
  -  Please Check The Readme Of Each Folder For More Details.
  -  A1 Folder Contains Assingments of A1.
  -  A2 Folder Contains Assingments of A2.
- -  JWT Assignment Folder Contains Assingment done using JWT.
+ -  JWT-Impl Assignment Folder Contains Assingment done using JWT.
 
 
 ### Thanks for having a Visit 😊.
