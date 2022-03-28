@@ -33,6 +33,9 @@
 
 [![IMAGE_ALT](https://img.youtube.com/vi/yoTohM2jYhs/1.jpg)](https://www.youtube.com/watch?v=yoTohM2jYhs)
 
+> - .Q4 - Spring Security Limit Login Attempts .
+ <a href="https://www.codejava.net/frameworks/spring-boot/spring-security-limit-login-attempts-example"> Ref Code Link </a>
+[![IMAGE_ALT](https://img.youtube.com/vi/ycrB-a36veE/1.jpg)](https://www.youtube.com/watch?v=ycrB-a36veE)
 
 ### Thanks for having a Visit 😊.
 ### End
