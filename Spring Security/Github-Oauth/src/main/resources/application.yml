@@ -1,0 +1,10 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: #check over the link Below To get Client Id and Password 
+            client-secret: #this part Cant Be revaled
+
+            #https://spring.io/guides/tutorials/spring-boot-oauth2/
