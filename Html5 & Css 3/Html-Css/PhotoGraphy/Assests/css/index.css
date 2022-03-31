@@ -19,7 +19,7 @@
   @media (max-width: 750px) {
     #background-video { display: none; }
     body {
-      background: url("/PhotoGraphy/Assests/img/bg1.png") no-repeat;
+      background: url("/Assests/img/bg1.png") no-repeat;
       background-size: cover;
     }
 }

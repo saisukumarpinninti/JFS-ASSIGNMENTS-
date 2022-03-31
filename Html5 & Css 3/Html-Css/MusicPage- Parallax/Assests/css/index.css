@@ -1,0 +1,224 @@
+:root{
+    --color-1 :	#1DB954;
+    --color-2 :	#191414;
+    --color-3 :	#313492;
+}
+body{
+    /* background: linear-gradient(43deg,var(--color-2),var(--color-1)); */
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.header_menu{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+    background: linear-gradient(43deg,var(--color-2),var(--color-1));
+    transition: all 1.5s;
+   
+}
+.logo{
+	width: 10%;
+	text-align: center;
+    color: var(--color-1);
+
+}
+
+.menu_list{
+	width: 50%;
+	text-align: right;
+	margin-right: 10px;
+    margin-left: 30%;
+}
+
+.menu_list li{
+	display: inline-block;
+	list-style: none;
+	letter-spacing: 1px;
+	padding-left: 15px;
+
+}
+
+.menu_list li a{
+	color:var(--color-h);
+	text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.menu_list li a:hover{
+	color:var(--color-3);
+    border-bottom: var(--color-2) solid 4px;
+    transform: rotateX(36deg);
+    transition: linear ease-in-out .5s;
+
+}
+.parallax {
+    background-image: url("../../Assests/img/m1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    margin-top: -3%;
+  }
+  .parallax h1{
+    transform: translateY(100%) ;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px var(--color-2);
+
+  }
+  .parallax a, h1:hover {
+    color: var(--color-1);
+    text-shadow: 2px 2px 2px var(--color-2);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) ease-in-out .5s;
+  }
+  
+.parallax1{
+    /* The image used */
+    background: #353533 url("../../Assests/img/m2.jpg"); 
+    background-blend-mode: multiply;
+    /* Set a specific height */
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+  .zoom {
+    border-radius: 8px ;
+    background: url("../../Assests/img/q.gif")  ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--color-1);
+
+    transition: transform .2s; /* Animation */
+    width: 150px;
+    height: 200px;
+    box-shadow: 2px 2px 2px var(--color-2);
+    opacity: 80%;
+    
+
+  }
+
+  .zoom:hover {
+    background-color: var(--color-3);
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    box-shadow: 2px 2px 2px var(--color-1);
+    opacity: 100%;
+  }
+  .zoo1 {
+    border-radius: 8px ;
+    background: url("../../Assests/img/q.gif")  ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--color-3);
+    transition: transform .2s; /* Animation */
+    width: 150px;
+    box-shadow: 2px 2px 2px var(--color-2);
+    height: 200px;
+    opacity: 80%;
+  }
+  .zoo1:hover {
+    background-color: var(--color-1);
+    box-shadow: 2px 2px 2px var(--color-3);
+    opacity: 100%;
+
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  .grid-container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 0px 0px 0px 0px 0px 0px; /*Make the grid smaller than the container*/
+    gap: 10px;
+  }
+  .grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+  .parallax1 h2{
+
+    color: var(--color-1);
+    margin-left: 2%;
+    /* margin-top: 0%; */
+    font-size: 50px;
+    text-shadow: 2px 2px 2px var(--color-2);
+  }
+  .parallax1 h2:hover{
+    color: var(--color-3);
+   
+    font-size: 50px;
+    
+
+  }
+  @media screen and (max-width: 600px) {
+     Body{
+      display: none;
+     }
+  }
+  .parallax2{
+    /* The image used */
+    background-image: url("../../Assests/img/music.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+  .parallax2 h2 {
+    margin-top: 0%;
+    text-align: center;
+    color: var(--color-3);
+    font-size: 60px;
+  }
+  .parallax2 h3 {
+    text-align: center;
+    color: var(--color-3);
+    font-size: 40px;
+  }
+  button {
+    background-color: var(--color-1);
+    border: none;
+    height: 60px;
+    color: var(--color-3);
+    text-align: center;
+    margin-left: 50%;
+  
+    font-weight: bold;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px var(--color-2);
+    transition: ease-in-out .5s;
+  }
+  button:hover {
+    background-color: var(--color-1);
+    color: white;
+    box-shadow: 2px 2px 2px var(--color-3);
+    transform: scale(1.15);
+  }
+*::selection{
+    background-color: var(--color-2);
+    color:var(--color-1);
+  }
+  
+  *::-webkit-scrollbar{
+    width: 0.6rem;
+    border: var(--color-1);
+  }
+  
+  *::-webkit-scrollbar-track{
+    background-color: var(--color-3);
+  }
+  
+  *::-webkit-scrollbar-thumb{
+    background-color:var(--color-1);
+    border-radius: 1px;
+  }
