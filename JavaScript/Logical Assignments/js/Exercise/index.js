@@ -65,8 +65,8 @@ function Q6(){
     var c = Math.round(d*(5/6));
     alert("number of times you have to roll a die to get a 6 : "+c+"\n"+"The Dice Number is : "+d);
 }
-q7
-function Q7(){
-     let A = ["Have a GOOD day!"," Have a BAD day!"]; 
-    alert(A[Math.floor(Math.random() * A.length)]);
-}
+// q7
+// function Q7(){
+//      let A = ["Have a GOOD day!"," Have a BAD day!"]; 
+//     alert(A[Math.floor(Math.random() * A.length)]);
+// }
