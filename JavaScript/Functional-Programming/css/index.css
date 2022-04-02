@@ -1,0 +1,66 @@
+:root {
+  --color-1: #fafafa;
+  --color-2: #060606;
+  --color-3: #292b01;
+}
+
+body {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask2045%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient2046)'%3e%3c/rect%3e%3cpath d='M 0%2c498 C 57.6%2c444.6 172.8%2c252.8 288%2c231 C 403.2%2c209.2 460.8%2c431.8 576%2c389 C 691.2%2c346.2 748.8%2c22.8 864%2c17 C 979.2%2c11.2 1036.8%2c336.6 1152%2c360 C 1267.2%2c383.4 1382.4%2c179.2 1440%2c134L1440 560L0 560z' fill='rgba(54%2c 54%2c 54%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask2045'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='50%25' x2='100%25' y2='50%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2046'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(134%2c 137%2c 115%2c 1)' offset='0.8'%3e%3c/stop%3e%3cstop stop-color='rgba(94%2c 28%2c 59%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  background-color: var(--color-2);
+  background-blend-mode: screen;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+  background-size: cover;
+  height: 100vh;
+}
+
+h2 {
+
+  color: var(--color-1);
+  font-size: 30px;
+ 
+  text-shadow: 2px 2px 2px var(--color-2);
+}
+
+
+
+button {
+  background-color: var(--color-2);
+  border: none;
+  height: 50px;
+  width: 5%;
+  color: var(--color-1);
+  text-align: center;
+  margin-left: 50%;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px var(--color-2);
+  transition: ease-in-out .5s;
+  /* margin: 10px; */
+}
+
+button:hover {
+  background-color: var(--color-1);
+  color: var(--color-2);
+  transform: scale(1.15);
+}
+
+*::-webkit-scrollbar {
+  width: 0.6rem;
+  border: var(--color-1);
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--color-3);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-1);
+  border-radius: 1px;
+}
