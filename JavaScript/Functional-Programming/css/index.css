@@ -12,9 +12,7 @@ body {
   scroll-behavior: smooth;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-repeat: no-repeat;
-  overflow-y: hidden;
   background-size: cover;
-  height: 100vh;
 }
 
 h2 {
@@ -28,13 +26,13 @@ h2 {
 
 
 button {
-  background-color: var(--color-2);
+  background-color: var(--color-1);
   border: none;
   height: 50px;
   width: 5%;
-  color: var(--color-1);
+  color: var(--color-2);
   text-align: center;
-  margin-left: 50%;
+  /* margin-left: 50%; */
   font-weight: bold;
   display: inline-block;
   font-size: 20px;
@@ -46,8 +44,6 @@ button {
 }
 
 button:hover {
-  background-color: var(--color-1);
-  color: var(--color-2);
   transform: scale(1.15);
 }
 

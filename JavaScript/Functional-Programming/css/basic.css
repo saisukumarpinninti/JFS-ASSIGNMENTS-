@@ -7,9 +7,9 @@
 
  /* code to change style of input fileds */
   input[type=number], input[type=password] ,[type=submit],[type=select] {
-    width: 10%;
+    width: 15%;
     padding: 12px 20px;
-    font-size: large;
+    font-size: 12px;
     font-weight: bold;
     color: rgb(27, 28, 3);
     border: 3px solid rgb(57, 27, 27);
@@ -18,9 +18,9 @@
     font-family: 'Roboto', sans-serif;
   }
   select{
-    width: 15%;
+    width: 20%;
     padding: 12px 20px;
-    font-size: large;
+    font-size: 15px;
     font-weight: bold;
     color: rgb(27, 28, 3);
     border: 3px solid rgb(57, 27, 27);
@@ -28,14 +28,19 @@
     transition: ease-in-out 0.5s;
     font-family: 'Roboto', sans-serif;
   }
-  input[type=number]:focus, input[type=submit]:hover {
+  input[type=number]:focus, input[type=submit]:hover,  input[type=select]:hover {
     background-color: rgb(255, 255, 255);
     transform: scale(1.2);
   }
   label{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
   }
-  
+  form{
+   border: 3px solid rgb(57, 27, 27);
+    border-radius: 4px;
+    width: 50%;
+    padding: 10px;
+  }
