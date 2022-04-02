@@ -1,0 +1,27 @@
+
+.coin {
+    background-image: url("https://pixlok.com/wp-content/uploads/2021/04/Star-Clipart-PNG.jpg");
+    background-size: contain;
+   border-radius: 50px ;
+   color: #000;
+   height: 60px ;
+   width: 60px ;
+  }
+  .dice{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_2KJjeIbznu0Sg-mf55vqjuhzsHycpgh8w&usqp=CAU");
+    background-size: contain;
+   border-radius: 20px ;
+   color: rgb(255, 255, 255);
+   height: 60px ;
+   width: 60px ;
+   font-size: 20px;
+  }
+
+  .p1{
+    margin-left: 30%;
+    padding: 10px;
+  }
+  .p2{
+    margin-left: 30%;
+    padding: 10px;
+  }
