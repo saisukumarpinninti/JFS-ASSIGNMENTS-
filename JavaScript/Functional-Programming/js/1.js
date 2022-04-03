@@ -36,3 +36,17 @@ function Q3(){
     }
     document.getElementById('hello').innerHTML = `The even number is ${even}`;
 }
+
+function Q4(){
+    var result = Map(square,arr);
+    document.getElementById('hello').innerHTML = `Orginal  Array <br> [ ${arr} ]<br>The result of map of square of array is : [ ${result} ]`;
+    document.getElementById('hello').innerHTML += `<br>The result of map of sqrt of array is : <br> [ ${Map(Math.sqrt,arr)} ]`;
+    
+}
+function Map(f,arr){
+    var result = [];
+    for(var i=0;i<arr.length;i++){
+        result.push(f(arr[i]));
+    }
+    return result;
+}

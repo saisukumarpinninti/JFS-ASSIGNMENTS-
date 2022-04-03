@@ -19,11 +19,8 @@ h2 {
 
   color: var(--color-1);
   font-size: 30px;
- 
   text-shadow: 2px 2px 2px var(--color-2);
 }
-
-
 
 button {
   background-color: var(--color-1);
@@ -32,16 +29,61 @@ button {
   width: 5%;
   color: var(--color-2);
   text-align: center;
-  /* margin-left: 50%; */
   font-weight: bold;
   display: inline-block;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 8px;
   box-shadow: 2px 2px 2px var(--color-2);
   transition: ease-in-out .5s;
-  /* margin: 10px; */
 }
+
+.p1{
+  align-items: center;
+  margin-left: 10%;
+  padding: 10px;
+}
+
+/* code to change style of input fileds */
+input[type=number],[type=submit],[type=select] {
+  width: 15%;
+  padding: 12px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(27, 28, 3);
+  border: 3px solid rgb(57, 27, 27);
+  border-radius: 4px;
+  transition: ease-in-out 0.5s;
+  font-family: 'Roboto', sans-serif;
+}
+select{
+  width: 20%;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(27, 28, 3);
+  border: 3px solid rgb(57, 27, 27);
+  border-radius: 4px;
+  transition: ease-in-out 0.5s;
+  font-family: 'Roboto', sans-serif;
+}
+input[type=number]:focus, input[type=submit]:hover  {
+  background-color: rgb(255, 255, 255);
+  transform: scale(1.2);
+}
+label{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-family: 'Roboto', sans-serif;
+}
+form{
+ border: 3px solid rgb(190, 174, 174);
+  border-radius: 4px;
+  width: 50%;
+  padding: 10px;
+}
+
 
 button:hover {
   transform: scale(1.15);
