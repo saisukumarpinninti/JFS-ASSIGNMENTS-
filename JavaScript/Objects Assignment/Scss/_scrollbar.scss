@@ -1,0 +1,13 @@
+//code for Coustom scroll bar :
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $tertiary-Color;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $primary-Color;
+    
+}
