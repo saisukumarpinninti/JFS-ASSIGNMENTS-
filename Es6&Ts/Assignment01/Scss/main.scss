@@ -1,0 +1,29 @@
+$primary-Color: #00bcd4;
+$secondary-Color: #f5f5f5;
+$tertiary-Color: #ff9800;
+@import 'scrollbar';
+
+body {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1153%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1154)'%3e%3c/rect%3e%3cpath d='M93.09 298.81L95.56 298.81L95.56 346.18L93.09 346.18z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M351.03 114.55a43.33 43.33 0 1 0 68.16 53.52z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M101.19 391.93L109.62 391.93L109.62 435.52L101.19 435.52z' fill='rgba(194%2c 12%2c 12%2c 1)'%3e%3c/path%3e%3cpath d='M1358.97 115.75L1367.7 115.75L1367.7 146.84L1358.97 146.84z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M848.04 57.2 a55.04 55.04 0 1 0 110.08 0 a55.04 55.04 0 1 0 -110.08 0z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M1237.24 426.13a12.18 12.18 0 1 0-4.65-23.91z' stroke='rgba(194%2c 12%2c 12%2c 1)'%3e%3c/path%3e%3cpath d='M134.37 379.03 a10.15 10.15 0 1 0 20.3 0 a10.15 10.15 0 1 0 -20.3 0z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M181.38 361.79a52.67 52.67 0 1 0 105.18 5.86z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M910.4 93.91a24.94 24.94 0 1 0 48.16 13z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M380.33 290.63 a9.17 9.17 0 1 0 18.34 0 a9.17 9.17 0 1 0 -18.34 0z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M88.77 556.13L117.84 556.13L117.84 585.2L88.77 585.2z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M548.96 41.47L589.71 41.47L589.71 83.92L548.96 83.92z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M1080.08 386.83L1101.79 386.83L1101.79 407.93L1080.08 407.93z' stroke='rgba(194%2c 12%2c 12%2c 1)'%3e%3c/path%3e%3cpath d='M1408.21 491.14 a16.42 16.42 0 1 0 32.84 0 a16.42 16.42 0 1 0 -32.84 0z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M90.2 60.03L91.02 60.03L91.02 60.54L90.2 60.54z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M1119.65 304.03a23.45 23.45 0 1 0 41.4 22.04z' fill='rgba(194%2c 12%2c 12%2c 1)'%3e%3c/path%3e%3cpath d='M870.73 275.34 a44.18 44.18 0 1 0 88.36 0 a44.18 44.18 0 1 0 -88.36 0z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M674.78 13.99L687.17 13.99L687.17 69.81L674.78 69.81z' stroke='rgba(194%2c 12%2c 12%2c 1)'%3e%3c/path%3e%3cpath d='M876.22 9.9L905.98 9.9L905.98 62.57L876.22 62.57z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M1325.86 211.13a36.72 36.72 0 1 0-32.76-65.73z' stroke='rgba(54%2c 62%2c 152%2c 1)'%3e%3c/path%3e%3cpath d='M398.91 362.77L400.27 362.77L400.27 364.13L398.91 364.13z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M116.13 277.57L136.03 277.57L136.03 296.07L116.13 296.07z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M198.49 278.52 a52.24 52.24 0 1 0 104.48 0 a52.24 52.24 0 1 0 -104.48 0z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M26.37 338.58L46.61 338.58L46.61 358.82L26.37 358.82z' stroke='rgba(54%2c 62%2c 152%2c 1)'%3e%3c/path%3e%3cpath d='M756.57 467.07L806.27 467.07L806.27 516.52L756.57 516.52z' fill='rgba(194%2c 12%2c 12%2c 1)'%3e%3c/path%3e%3cpath d='M1047.25 143.5 a3.4 3.4 0 1 0 6.8 0 a3.4 3.4 0 1 0 -6.8 0z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M332.12 255L337.64 255L337.64 308.07L332.12 308.07z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1386.31 589.86a40.7 40.7 0 1 0-31.96-74.86z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M1182.44 537.23L1203.13 537.23L1203.13 559.83L1182.44 559.83z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1350.98 29.7 a39.45 39.45 0 1 0 78.9 0 a39.45 39.45 0 1 0 -78.9 0z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M529.18 466.4L544.45 466.4L544.45 481.67L529.18 481.67z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M337.31 145.29a55.03 55.03 0 1 0 7.73-109.79z' fill='rgba(54%2c 62%2c 152%2c 1)'%3e%3c/path%3e%3cpath d='M384.13 158.14a52.47 52.47 0 1 0 81.26-66.41z' stroke='rgba(194%2c 12%2c 12%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1153'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1154'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(34%2c 34%2c 34%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  background-color: #568f93;
+  background-blend-mode: multiply;
+  color: $primary-Color;
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: $primary-Color;
+  text-align: center;
+  margin-top: 10%;
+}
+h2{
+  font-size: 1rem;
+  color: $secondary-Color;
+  text-align: left;
+  margin-left: 2%;
+  
+}
