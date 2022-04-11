@@ -1,0 +1,25 @@
+<p>hw1 works!</p>
+<input [class]="{clicked}"  [(ngModel)]="sampoutput" type="text" #sampinput placeholder="input any text here"/>
+<!-- <input type="text"  > -->
+<p>{{sampoutput}}</p>
+<button [class]="{clicked}" [style.color]="'{getcolor}'" (click)="onClick(sampinput.value)">Click me!</button>
+<h1>Employee Data</h1>
+<h1> {{errormsg}}</h1>
+<table >
+    <th>Employee id </th>
+    <th>Employee name </th>
+    <th>Employee Designation </th>
+    <th>Employee Department </th>
+        <th>Employee salary </th>
+
+    <tr *ngFor="let emp of employees" routerLink="/employee/{{emp.employeeId}}" [class.select]="isSelect(emp.employeeId)">
+        <td >{{emp.employeeId}}</td>
+        <td>{{emp.employeeName}}</td>
+        <td>{{emp.employeeDepartment}}</td>
+        <td>{{emp.employeeDesignation}}</td>
+        <td>{{emp.employeeSalary}}</td>
+    </tr>
+    <!-- <script > console.log(employees)</script> -->
+</table>
+
+ 
