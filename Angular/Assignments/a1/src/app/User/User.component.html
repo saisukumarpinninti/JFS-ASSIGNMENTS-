@@ -1,0 +1,10 @@
+<H1>Welcome User,</H1>
+<h2>List Of All Restuarants With Their Menus</h2>
+<table >
+  <th>Restuarant name </th>
+  <th>Restuarant Menu</th>
+  <tr *ngFor="let r of restmenu| keyvalue" routerLink="/order/{{r.key}}">
+      <td>{{r.key}}</td>
+      <td>{{r.value}}</td>
+  </tr>
+</table>

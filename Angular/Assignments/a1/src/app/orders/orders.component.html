@@ -1,0 +1,40 @@
+<div id="non-printable">
+<h3>The Restuarant and menu With the id  {{sid}} </h3>
+<h3>{{errormsg}}</h3>
+<div *ngIf="bol1"><table >
+    <th>Restuarant name </th>
+    <th>Restuarant Menu</th>
+    <tr>
+        <td >{{id}}</td>
+        <td >{{rm}}</td> 
+    </tr>
+</table>
+<h3>Place Your Order:</h3></div>
+</div><h2 id="atprint" >Order Summary</h2>
+<div id="printable">
+<form (ngSubmit)="onSubmit()" >
+    <div class="form-group">
+      <label for="item">Select Item1 : </label>
+      <select  [(ngModel)]="item" name="item" placehoder="please Select" > <option *ngFor="let i of rm" [value]="i" >{{i}}</option> </select>
+      <label for="quantity">Quantity : </label>
+      <input type="number" [(ngModel)]="quantity" name="quantity" placeholder="1" min="1" max="10" required></div>
+    <div class="form-group">
+      <label for="item1">Select Item2 : </label>
+      <select  [(ngModel)]="item1" name="item1"> <option *ngFor="let i of rm" [value]="i">{{i}}</option> </select>
+      <label for="quantity1">Quantity : </label>
+      <input type="number" [(ngModel)]="quantity1" placeholder="0" name="quantity1" min="1" max="10" ></div>
+    <div class="form-group">
+      <label for="item2">Select Item3 : </label>
+      <select  [(ngModel)]="item2" name="item2"> <option *ngFor="let i of rm" [value]="i" required>{{i}}</option> </select>
+      <label for="quantity2">Quantity : </label>
+      <input type="number" [(ngModel)]="quantity2"  placeholder="0"  name="quantity1" min="1" max="10" ></div>   
+      <div class="form-group">
+        <label for="contact">Contact Number : </label>
+        <input type="number" [(ngModel)]="contact" name="contact" placeholder="+91" required></div>
+        <div class="form-group">
+          <label for="address">Address : </label>
+          <input type="text" [(ngModel)]="address" name="address" placeholder="Enter your address" required></div>
+    <button type="submit" id="non-printable" >PlaceOrder</button>
+</form>
+<h3 id="atprint" >Order Place SuccessFully Our Delivery Agent Will Contact you with information of total payment</h3>
+</div>

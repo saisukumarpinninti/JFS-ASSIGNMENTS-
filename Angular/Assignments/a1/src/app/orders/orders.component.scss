@@ -1,0 +1,6 @@
+#atprint {display: none;}
+@media print
+{
+    #non-printable { display: none; }
+    #printable,#atprint { margin-left: 5%; display: block; }
+}

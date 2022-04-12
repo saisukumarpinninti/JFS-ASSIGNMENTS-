@@ -1,0 +1,18 @@
+<h2>The Restuarant and menu With the id  {{sid}} </h2>
+<h1>{{errormsg}}</h1>
+<table >
+    <th>Restuarant name </th>
+    <th>Restuarant Menu</th>
+    <tr>
+        <td >{{id}}</td>
+        <td >{{rm}},{{name}}</td> 
+    </tr>
+</table>
+<br><h2 #left>Add To Menu </h2>
+<input type="text" [(ngModel)]="name" placeholder="Enter item to add">
+<button (click)=" addtoarray(name)">Add</button>
+<br><h2 #left >Delete From Menu </h2>
+<select id="items"  [(ngModel)]="item"  >
+<option *ngFor=" let r of rm" value="{{r}}">{{r}}</option>
+</select>
+<button (click)=" Deletefromarray(item)">Delete</button>

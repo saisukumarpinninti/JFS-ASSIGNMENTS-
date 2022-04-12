@@ -1,0 +1,17 @@
+<h1> Hello Admin !</h1>
+<table >
+    <th>Restuarant name </th>
+    <th>Restuarant Menu</th>
+    <tr *ngFor="let r of restmenu| keyvalue" routerLink="/Restauraunt/{{r.key}}">
+        <td>{{r.key}}</td>
+        <td>{{r.value}}</td>
+    </tr>
+</table>
+<br><h2 #left>Add New Restuarant </h2>
+<input type="text" [(ngModel)]="name" >
+<button (click)=" addrest(name)">Add</button>
+<br><h2 #left >Delete Restauraunt </h2>
+<select id="items"  [(ngModel)]="item"  >
+<option *ngFor=" let r of restmenu | keyvalue" value="{{r.key}}">{{r.key}}</option>
+</select>
+<button (click)=" Deletefrommap(item)">Delete</button>
