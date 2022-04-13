@@ -1,0 +1,23 @@
+<button (click)="boolchange(bool1)">Click me</button>
+<div *ngIf="bool1">
+    <app-c1 #child [loggedin]="userloggedin" (evntemit)="greet($event)"></app-c1>
+    <button (click)="userloggedin=true">login</button>
+    <button (click)="userloggedin=false">logout</button>
+</div>
+<!-- <h1>{{child.name}}</h1> -->
+<button (click)="child.log(this.child.name)">log hello</button>
+
+<div>
+    <h2>Welcome {{name}}</h2>
+    <label for="name">Enter your name:</label>
+    <input #nameRef type="text" [(ngModel)]="name">
+    <h2>Welcome {{uname}}</h2>
+    <label for="name">Enter uname:</label>
+    <input type="text" [ngModel]="uname" (ngModelChange)="greet($event)">
+    <h2>Welcome {{cname}}</h2>
+    <label for="name">Enter cname:</label>
+    <input type="text" [(ngModel)]="cname">
+    <h3>Clicked {{countvalue}} Times</h3>
+    <button (click)="increment()">Increment</button>
+</div>
+<img src="{{imageUrl}}">

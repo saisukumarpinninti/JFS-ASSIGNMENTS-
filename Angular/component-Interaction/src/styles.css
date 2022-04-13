@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap");
+body {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/140/209/243/humor-funny-fun-art-1680x1050-entertainment-funny-hd-art-wallpaper-preview.jpg");
+  background-color: #023047;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0px;
+  font-family: 'Mukta', sans-serif;
+  scroll-behavior: smooth;
+  transition: ease-in-out 0.5s;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #8ecae6;
+  /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+nav li {
+  float: right;
+}
+
+nav li a {
+  display: block;
+  color: #023047;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #ffb703;
+}
+
+nav .active {
+  background-color: #ffb703;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #f8fff8;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #f8fff8;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #023047;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f8fff8;
+}
+
+th {
+  background-color: #ffb703;
+  color: #f8fff8;
+}
+
+tr:nth-child(even) {
+  background-color: #8ecae6;
+}
+
+tr:nth-child(odd) {
+  background-color: #f8fff8;
+}
+
+td {
+  padding: 10px;
+}
+
+input[type=text], input[type=number], select {
+  padding: 12px 20px;
+  margin-left: 1%;
+  box-sizing: border-box;
+  border: 2px solid #ffb703;
+  border-radius: 4px;
+  background-color: #f8fff8;
+  color: #023047;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+button {
+  background-color: #ffb703;
+  color: #f8fff8;
+  padding: 12px 20px;
+  margin-left: 1%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fb8500;
+  color: #8ecae6;
+  transform: scale(1.1);
+}
+
+h3 {
+  margin-left: 1%;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffb703;
+}
+p{
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #023047;
+}
+label {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffb703;
+  margin-left: 1%;
+}
+
+form {
+  margin-left: 1%;
+  padding: 10px;
+  border: 2px solid #8ecae6;
+  border-radius: 4px;
+}
+
+div {
+  margin-left: 1%;
+  padding: 10px;
+}
+/*# sourceMappingURL=styles.css.map */

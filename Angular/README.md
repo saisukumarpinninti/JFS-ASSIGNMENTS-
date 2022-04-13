@@ -1,5 +1,6 @@
 ## Legend :
-- Hello world is the Handson Project. Upto Routing .
+> - [Helloworld] (./helloworld/src/app/app.component.html) is the Handson Project. Upto Routing .
+>- [Component-Interaction] (./component-Interaction/src/app/app.component.html)  is the Handson Project. On Angular Component Interaction.
 
 ## Setup :
 
