@@ -1,0 +1,87 @@
+<div class="containerfluid">
+    <h2 class="text-center"> signup </h2>
+    <form [formGroup]="signupform" (ngSubmit)="onsubmit()" *ngIf="!submitted">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="user name">Name <i class="fa fa-id-badge"></i></label>
+                    <input type="text" formControlName="username" class="form-control" placeholder="Enter name"
+                        [class.is-invalid]="username?.invalid && username?.touched">
+                    <small class="text-danger" *ngIf="username?.errors?.['minlength'] && username?.touched">minLength is
+                        3</small>
+                    <small class="text-danger" *ngIf="username?.errors?.['required'] && username?.touched">User
+                        Name is required</small>
+                    <small class="text-danger" *ngIf="username?.errors?.['forbiddenName'] && username?.touched">
+                        "{{username.value}}" User
+                        Name not allowed</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <i class="fa fa-envelope"></i></label>
+                    <input type="email" formControlName="email" class="form-control" placeholder="Enter email"
+                        [class.is-invalid]="email?.invalid && email?.touched">
+                    <small class="text-danger" *ngIf="email?.errors?.['email'] && email?.touched">Invalid Email</small>
+                    <small class="text-danger" *ngIf="email?.errors?.['required'] && email?.touched">Email is
+                        required</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password <i class="fa fa-key"></i></label>
+                    <input type="password" formControlName="password" class="form-control" placeholder="Enter password"
+                        [class.is-invalid]="password?.invalid && password?.touched">
+                    <small class="text-danger" *ngIf="password?.errors?.['required'] && password?.touched">User
+                        password is required</small>
+                    <small class="text-danger" *ngIf="password?.errors?.['minlength'] && password?.touched">minLength is
+                        8 , Enter {{8-password.value.length}} more Characthers</small>
+
+                </div>
+                <div class="form-group">
+                    <label for="Confirm password">Confirm password</label>
+                    <input type="password" formControlName="confirmpassword" class="form-control"
+                        placeholder="Re-Enter Your Password">
+                    <small class="text-danger" *ngIf="signupform.errors?.['misMatch']">Passwords do not match </small>
+                    <small class="text-danger"
+                        *ngIf="confirmpassword?.errors?.['required'] && confirmpassword?.touched">Please Confirm The
+                        Password</small>
+                </div>
+
+                <div formArrayName="alternateemails" *ngFor="let e of alternateemails.controls ; let i =index">
+                    <label for="email">Alternate Email <i class="fa fa-envelope"></i></label>
+                    <input type="email" [formControlName]="i" class="form-control" placeholder="Enter alternate email">
+                </div>
+                <div class="formcheck">
+                    <label><input type="checkbox" formControlName="subscribe" class="form-check-input">&nbsp; Send
+                        promotional Emails
+                    </label>
+                </div><br>
+                <button class="btn btn-warning btn-sm" type="button" (click)="addAlternateEmail()">Add Email</button>
+
+                <!-- <button class="btn btn-warning mx-auto" type="button" (click)="loadApiData()">loadApi</button> -->
+            </div>
+            <div class="col" formGroupName="address">
+                <div class="form-row .form-control-sm">
+                    <div class="form-group">
+                        <label>City <i class="fas fa-city"></i></label>
+                        <input type="text" formControlName="city" class="form-control " placeholder="Enter City">
+                    </div>
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text" formControlName="state" class="form-control" placeholder="Enter State">
+                    </div>
+                    <div class="form-group">
+                        <label>Zipcode</label>
+                        <input type="text" formControlName="zipcode" class="form-control" placeholder="Enter Zipcode">
+                    </div>
+                    <br>
+                </div>
+                <button type="submit" [disabled]="signupform.invalid" class="btn btn-primary">signup</button>
+                <br>
+                <small class="text-danger" *ngIf="signupform.invalid">Please Submit all the deatils.</small>
+            </div>
+        </div>
+    </form>
+    <div *ngIf="submitted ">
+        <h1>Form submitted SuccesFully  With Data </h1>
+        <p *ngFor="let u of signupform.value | keyvalue">{{u.key}}:{{u.value}}</p>
+    </div>
+    <br>
+    {{signupform.value | json}}
+</div>
