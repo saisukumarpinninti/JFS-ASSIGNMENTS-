@@ -1,0 +1,123 @@
+<h2>advertisements</h2>
+<div class="container"  >
+  <button type="button" class="btn btn-primary" (click)="refresh()"><mat-icon>refresh</mat-icon></button>
+  <mat-form-field id="right" floatLabel='always'appearance='outline'   color="primary">
+    <mat-label>Search<mat-icon>search</mat-icon></mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Type here">
+    </mat-form-field>
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" >
+    <!-- title colum -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell  *matHeaderCellDef mat-sort-header>title</th>
+      <td mat-cell *matCellDef="let adv" t="adv.title"> {{adv.title}} </td>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef  mat-sort-header>name</th>
+      <td mat-cell *matCellDef="let adv"> {{adv.name}} </td>
+    </ng-container>
+    <!-- category cloumn -->
+    <ng-container matColumnDef="category">
+      <th mat-header-cell  *matHeaderCellDef mat-sort-header>category</th>
+      <td mat-cell *matCellDef="let adv"> {{adv.category}} </td>
+    </ng-container>
+  
+    <!-- description Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef>description</th>
+      <td mat-cell *matCellDef="let adv"> {{adv.description}} </td>
+    </ng-container>
+  <!-- Actions Column -->
+  <ng-container matColumnDef="Actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let adv" id="point"><mat-icon (click)="deletead(adv.name)">remove_circle</mat-icon>
+      <mat-icon (click)="openDialog(adv.title,adv.name,adv.category,adv.description)" >edit</mat-icon></td>
+  </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" ></tr>
+  </table> 
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close"(click)="closeDialog()">&times;</span>
+    <form [formGroup]="AdvertisementForm" (ngSubmit)="onSubmit()" >
+      <h1>Ola!</h1>
+      <mat-horizontal-stepper >
+        <mat-step label="Information">
+          <div class="mat-subheading-2">Please Add Your Information :</div>
+          <!-- title -->
+          <mat-form-field floatLabel='always' appearance='outline' color="accent">
+            <mat-label>Title For The Advertisement</mat-label>
+            <input matInput placeholder="Enter title" formControlName="title">
+            <mat-hint *ngIf="title?.touched&&title?.errors?.['required']" align="end">Title is required <mat-icon>
+                error_outline</mat-icon>
+            </mat-hint>
+            <mat-hint *ngIf="title?.touched&&title?.errors?.['minlength']" align="end">Title must be at least 5 characters
+              <mat-icon>error_outline</mat-icon>
+            </mat-hint>
+          </mat-form-field>
+          <!-- Name -->
+          <mat-form-field floatLabel='always' appearance='outline' color="accent">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Enter name" formControlName="name">
+            <mat-hint *ngIf="name?.touched&&name?.errors?.['required']" align="end">name is required <mat-icon>error_outline
+              </mat-icon>
+            </mat-hint>
+            <mat-hint *ngIf="name?.touched&&name?.errors?.['minlength']" align="end">name must be at least 5 characters
+              <mat-icon>error_outline</mat-icon>
+            </mat-hint>
+          </mat-form-field>
+          <div class="nextbutton">
+            <button mat-raised-button color="accent" [disabled]="name?.invalid&&title?.invalid" matStepperNext>Next<mat-icon>arrow_right</mat-icon></button>
+          </div>
+        </mat-step>
+        <!-- Catogory -->
+        <mat-step label="category" >
+          <div class="mat-subheading-2">Please Select Your Category :</div>
+          <mat-form-field floatLabel='always' appearance='outline' color="accent" >
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="category">
+              <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+            </mat-select>
+            <mat-hint *ngIf="category?.touched && category?.errors?.['required']" align="end">category is required
+              <mat-icon>
+                error_outline</mat-icon>
+            </mat-hint>
+          </mat-form-field>
+          <div class="perviousbutton">
+            <button class="perviousbutton" mat-raised-button color="accent" matStepperPrevious>
+              <mat-icon>arrow_left</mat-icon>previous
+            </button>
+            <button class="nextbutton" mat-raised-button color="accent" matStepperNext>Next<mat-icon>arrow_right
+              </mat-icon></button>
+          </div>
+        </mat-step>
+        <!-- Description -->
+        <mat-step label="Description">
+          <div class="mat-subheading-2">Please Add Your Description :</div>
+          <mat-form-field floatLabel='always' appearance='outline' color="accent">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="Enter description in 200 characters" formControlName="description"></textarea>
+            <mat-hint *ngIf="description?.touched&& description?.errors?.['maxLength']" align="end">category is required
+              <mat-icon>
+                error_outline</mat-icon>
+            </mat-hint>
+          </mat-form-field>
+          <div class="perviousbutton">
+            <button class="perviousbutton" mat-raised-button color="accent" matStepperPrevious>
+              <mat-icon>arrow_left</mat-icon>previous
+            </button>
+            <button type="submit" class="leftbutton"  (click)="editad(title?.value) " [disabled]="AdvertisementForm.invalid" mat-raised-button
+              color="primary">Submit<mat-icon>arrow_right
+              </mat-icon></button>
+          </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </form>
+  </div>
+
+</div>

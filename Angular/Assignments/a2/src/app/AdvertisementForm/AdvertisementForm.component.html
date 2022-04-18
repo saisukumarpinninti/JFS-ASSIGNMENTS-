@@ -1,0 +1,92 @@
+<form [formGroup]="AdvertisementForm" (ngSubmit)="onSubmit()" *ngIf="!submitted">
+  <h1>Ola!</h1>
+  <mat-horizontal-stepper >
+    <mat-step label="Information">
+      <div class="mat-subheading-2">Please Add Your Information :</div>
+      <!-- title -->
+      <mat-form-field floatLabel='always' appearance='outline' color="accent">
+        <mat-label>Title For The Advertisement</mat-label>
+        <input matInput placeholder="Enter title" formControlName="title">
+        <mat-hint *ngIf="title?.touched&&title?.errors?.['required']" align="end">Title is required <mat-icon>
+            error_outline</mat-icon>
+        </mat-hint>
+        <mat-hint *ngIf="title?.touched&&title?.errors?.['minlength']" align="end">Title must be at least 5 characters
+          <mat-icon>error_outline</mat-icon>
+        </mat-hint>
+      </mat-form-field>
+      <!-- Name -->
+      <mat-form-field floatLabel='always' appearance='outline' color="accent">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter name" formControlName="name">
+        <mat-hint *ngIf="name?.touched&&name?.errors?.['required']" align="end">name is required <mat-icon>error_outline
+          </mat-icon>
+        </mat-hint>
+        <mat-hint *ngIf="name?.touched&&name?.errors?.['minlength']" align="end">name must be at least 5 characters
+          <mat-icon>error_outline</mat-icon>
+        </mat-hint>
+      </mat-form-field>
+      <div class="nextbutton">
+        <button mat-raised-button color="accent" [disabled]="name?.invalid&&title?.invalid" matStepperNext>Next<mat-icon>arrow_right</mat-icon></button>
+      </div>
+    </mat-step>
+    <!-- Catogory -->
+    <mat-step label="category" >
+      <div class="mat-subheading-2">Please Select Your Category :</div>
+      <mat-form-field floatLabel='always' appearance='outline' color="accent" >
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="category">
+          <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+        </mat-select>
+        <mat-hint *ngIf="category?.touched && category?.errors?.['required']" align="end">category is required
+          <mat-icon>
+            error_outline</mat-icon>
+        </mat-hint>
+      </mat-form-field>
+      <div class="perviousbutton">
+        <button class="perviousbutton" mat-raised-button color="accent" matStepperPrevious>
+          <mat-icon>arrow_left</mat-icon>previous
+        </button>
+        <button class="nextbutton" mat-raised-button color="accent" matStepperNext>Next<mat-icon>arrow_right
+          </mat-icon></button>
+      </div>
+    </mat-step>
+    <!-- Description -->
+    <mat-step label="Description">
+      <div class="mat-subheading-2">Please Add Your Description :</div>
+      <mat-form-field floatLabel='always' appearance='outline' color="accent">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Enter description in 200 characters" formControlName="description"></textarea>
+        <mat-hint *ngIf="description?.touched&& description?.errors?.['maxLength']" align="end">category is required
+          <mat-icon>
+            error_outline</mat-icon>
+        </mat-hint>
+      </mat-form-field>
+      <div class="perviousbutton">
+        <button class="perviousbutton" mat-raised-button color="accent" matStepperPrevious>
+          <mat-icon>arrow_left</mat-icon>previous
+        </button>
+        <button type="submit" class="leftbutton"  (click)="addtoarr()" [disabled]="AdvertisementForm.invalid" mat-raised-button
+          color="primary">Submit<mat-icon>arrow_right
+          </mat-icon></button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</form>
+<div *ngIf="submitted" >
+  <style>
+    @import url(//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css);
+    @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+  </style>
+  <!-- <link rel="stylesheet" href="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/default_thank_you.css"> -->
+  <header class="site-header" id="header">
+    <h1 class="site-header__title" data-lead-id="site-header-title">THANK YOU!</h1>
+  </header>
+
+  <div class="main-content">
+    <mat-icon class="main-content__checkmark" id="checkmark">verified</mat-icon>
+    <p class="main-content__body" data-lead-id="main-content-body">Thanks a bunch for filling that out.
+      It means a lot to us, just like you do! We really appreciate you giving us a moment of your time today. Thanks for
+      being you.</p>
+  </div>
+
+</div>
