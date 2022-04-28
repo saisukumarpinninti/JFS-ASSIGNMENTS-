@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/order")
-public class OrderPublisher {
+@RequestMapping("/customer")
+public class customerPublisher {
     @Autowired
     private RabbitTemplate template;
 
     @PostMapping("/")
-    public String bookOrder(@RequestBody customer customer) {
+    public String bookcustomer(@RequestBody customer customer) {
         customer.setCostumerId("9");
         System.out.println(customer);
         template.convertAndSend(MessagingConfig.EXCHANGE, MessagingConfig.ROUTING_KEY, customer);
